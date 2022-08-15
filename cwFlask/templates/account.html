@@ -1,0 +1,6 @@
+{% extends 'layouts.html'%}
+{%block content1%}
+    {% for our_book in our_books%}
+        {{our_book.id}} - {{our_book.title}} - {{our_book.author}}
+    {% endfor %}
+{%endblock content1%}

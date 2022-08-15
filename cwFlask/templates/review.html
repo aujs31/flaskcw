@@ -1,0 +1,14 @@
+{% extends 'layouts.html'%}
+{%block content1%}
+<div class="shadow p-3 mb-5 bg-body rounded">
+	<h2>{{ review.title }}</h2>
+	<small>By: {{ review.author }}<br/>
+    </small> <br/><br/>
+
+	{{ review.description }}<br/><br/>
+</div>
+
+
+<a href="{{ url_for('reviews')}}" class="btn btn-outline-secondary btn-sm">Back To Blog</a>
+
+{%endblock content1%}

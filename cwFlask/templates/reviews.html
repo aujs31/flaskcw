@@ -1,0 +1,27 @@
+{% extends 'layouts.html'%}
+{%block content1%}
+
+{% for review in reviews %}
+<div class="shadow p-3 mb-5 bg-body rounded">
+	<h2><a href="{{ url_for('review', id=review.id)}}"> Title: {{ review.title }}</a></h2>
+	<h4>Author: {{review.author}}</h4>
+	<small>Posted by: {{ review.bookrel.username }}<br/>
+    <br/><br/>
+
+	<br/><br/>
+	<a href="{{ url_for('review', id=review.id)}}" class="btn btn-outline-secondary btn-sm">View Post</a>
+
+	{% if review.book_fk == current_user.id %}
+	<a href="{{ url_for('delete_post', id=review.id)}}" class="btn btn-outline-danger btn-sm">Delete Post</a>
+	{% endif %}
+
+	<br/><br/>
+</div>
+<br/>
+{% endfor %}
+
+
+
+
+
+{%endblock content1%}

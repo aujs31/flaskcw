@@ -1,0 +1,6 @@
+.cardcontent{
+    background: aquamarine;
+}
+.cardcontent .card{
+    background: none;
+}
